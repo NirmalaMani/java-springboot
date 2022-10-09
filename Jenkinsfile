@@ -6,12 +6,13 @@ pipeline {
     stages{
         stage('Test'){
             steps{
-                sh 'mvn test'
+                echo 'test'
             }
         }
         stage('Package'){
             steps{
-                sh 'mvn clean package -Dmaven.test.skip=true'
+	        echo 'Package'
+               
             }
         }
         stage('Deploy war'){
